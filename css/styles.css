@@ -1,0 +1,77 @@
+ * { font-feature-settings: "cv11", "ss01"; -webkit-font-smoothing: antialiased; }
+
+        .glass-panel {
+            backdrop-filter: blur12px;
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .glass-panel-xl {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488, #14b8a6, #0d9488);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-glow {
+            background: radial-gradient(ellipse at 50% 0%, rgba(13,148,136,0.15) 0%, transparent 60%);
+        }
+
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+        }
+
+        .social-card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .social-card-hover:hover {
+            transform: translateY(-2px);
+        }
+
+        .profile-ring {
+            background: conic-gradient(#0d9488, #14b8a6, #2dd4bf, #0d9488);
+            padding: 3px;
+            border-radius: 9999px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .fade-in-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.15s forwards; opacity: 0; }
+        .fade-in-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+        .fade-in-up-delay-3 { animation: fadeInUp 0.8s ease-out 0.45s forwards; opacity: 0; }
+
+        /* Smooth section scrolling offset for fixed nav */
+        section[id] { scroll-margin-top: 80px; }
+
+        /* Active nav indicator */
+        .nav-link.active { color: #0d9488; }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #0d9488;
+            border-radius: 1px;
+        }

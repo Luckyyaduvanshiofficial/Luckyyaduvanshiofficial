@@ -1,0 +1,28 @@
+# robots.txt for luckyyaduvanshi.com
+# Lucky Yaduvanshi Official Website
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luckyyaduvanshi.com/sitemap.xml
+
+# Crawl-delay (respectful crawling)
+Crawl-delay: 1
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block unnecessary crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 5
