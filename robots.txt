@@ -1,11 +1,11 @@
-# robots.txt for luckyyaduvanshi.com
-# Lucky Yaduvanshi Official Website
+# robots.txt for luckyyaduvanshi.in
+# Lucky Yaduvanshi Official Website - Backend Developer from Jaipur, India
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://luckyyaduvanshi.com/sitemap.xml
+Sitemap: https://luckyyaduvanshi.in/sitemap.xml
 
 # Crawl-delay (respectful crawling)
 Crawl-delay: 1

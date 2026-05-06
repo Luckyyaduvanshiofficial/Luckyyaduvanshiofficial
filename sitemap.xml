@@ -3,66 +3,42 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
     <url>
-        <loc>https://luckyyaduvanshi.com/</loc>
-        <lastmod>2025-01-01</lastmod>
+        <loc>https://luckyyaduvanshi.in/</loc>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Official</image:title>
-            <image:caption>Lucky Yaduvanshi Official — Developer and Entrepreneur</image:caption>
+            <image:loc>https://luckyyaduvanshi.in/images/Lucky-main-1.png</image:loc>
+            <image:title>Lucky Yaduvanshi Backend Developer</image:title>
+            <image:caption>Lucky Yaduvanshi — Backend Developer from Jaipur, India specializing in Node.js, PostgreSQL, and API development</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-official.png</image:loc>
-            <image:title>Lucky Yaduvanshi Official</image:title>
+            <image:loc>https://luckyyaduvanshi.in/images/lucky-main-2.png</image:loc>
+            <image:title>Lucky Yaduvanshi Professional Photo</image:title>
         </image:image>
         <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-developer.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Developer</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-portrait.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Portrait</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-profile.png</image:loc>
-            <image:title>Lucky Yaduvanshi Profile</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-headshot.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Headshot</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-official-photo.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Official Photo</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-creator.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Creator</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://luckyyaduvanshi.com/images/lucky-yaduvanshi-official-og.jpg</image:loc>
-            <image:title>Lucky Yaduvanshi Official OG Image</image:title>
+            <image:loc>https://luckyyaduvanshi.in/images/Lucky-colage.png</image:loc>
+            <image:title>Lucky Yaduvanshi Professional Collage</image:title>
         </image:image>
     </url>
 
     <url>
-        <loc>https://luckyyaduvanshi.com/#about</loc>
-        <lastmod>2025-01-01</lastmod>
+        <loc>https://luckyyaduvanshi.in/#about</loc>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://luckyyaduvanshi.com/#projects</loc>
-        <lastmod>2025-01-01</lastmod>
+        <loc>https://luckyyaduvanshi.in/#projects</loc>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://luckyyaduvanshi.com/#contact</loc>
-        <lastmod>2025-01-01</lastmod>
+        <loc>https://luckyyaduvanshi.in/#contact</loc>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
