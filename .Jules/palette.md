@@ -1,0 +1,3 @@
+## 2026-06-10 - Added Skip to Main Content Link
+**Learning:** Adding a "Skip to main content" link at the beginning of the document is a critical accessibility standard for users who rely on keyboards or screen readers. It allows them to quickly bypass large, repetitive navigation blocks on every page load, making the application much more navigable and efficient.
+**Action:** Always include a visually hidden, focusable skip link as the very first interactive element in the `<body>` of all web pages. It should point directly to the main `<main>` content container or primary section (like `#home`).
