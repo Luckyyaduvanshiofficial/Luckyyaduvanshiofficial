@@ -77,16 +77,36 @@
         // ---- Contact Form (Demo) ----
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitDefault = document.getElementById('submitDefault');
+        const submitLoading = document.getElementById('submitLoading');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            formMessage.classList.remove('hidden');
-            formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400';
-            formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
-            contactForm.reset();
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitDefault.classList.add('hidden');
+            submitLoading.classList.remove('hidden');
+            formMessage.classList.add('hidden');
+
+            // Simulate network request
             setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
+                // Restore button state
+                submitBtn.disabled = false;
+                submitDefault.classList.remove('hidden');
+                submitLoading.classList.add('hidden');
+
+                // Show success message
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 mt-4';
+                formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
+                contactForm.reset();
+
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
         });
 
         // ---- Current Year ----
