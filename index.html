@@ -1074,9 +1074,9 @@
                             <label for="message" class="text-xs font-medium text-slate-600 dark:text-slate-400 mb-1.5 block">Message</label>
                             <textarea id="message" name="message" rows="4" required class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent transition-all resize-none" placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-teal text-white text-sm font-semibold rounded-full py-3 px-6 hover:bg-brand-teal-hover transition-colors duration-300 shadow-lg shadow-teal-900/10">
+                        <button id="submitBtn" type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-teal text-white text-sm font-semibold rounded-full py-3 px-6 hover:bg-brand-teal-hover disabled:opacity-70 disabled:cursor-not-allowed transition-colors duration-300 shadow-lg shadow-teal-900/10">
                             <span class="iconify" data-icon="lucide:send" data-width="16"></span>
-                            Send Message
+                            <span>Send Message</span>
                         </button>
                         <div id="formMessage" class="hidden text-sm text-center py-2 rounded-lg"></div>
                     </form>
