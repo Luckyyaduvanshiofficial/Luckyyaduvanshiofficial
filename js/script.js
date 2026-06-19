@@ -77,16 +77,39 @@
         // ---- Contact Form (Demo) ----
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitIcon = document.getElementById('submitIcon');
+        const submitText = document.getElementById('submitText');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            formMessage.classList.remove('hidden');
-            formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400';
-            formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
-            contactForm.reset();
+
+            // Loading state
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending...';
+            submitIcon.setAttribute('data-icon', 'lucide:loader-2');
+            submitIcon.classList.add('animate-spin');
+            formMessage.classList.add('hidden'); // Hide previous messages
+
+            // Simulate async network request
             setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
+                // Restore button state
+                submitBtn.disabled = false;
+                submitText.textContent = 'Send Message';
+                submitIcon.setAttribute('data-icon', 'lucide:send');
+                submitIcon.classList.remove('animate-spin');
+
+                // Show success message
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 mt-4';
+                formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500); // 1.5 second simulated delay
         });
 
         // ---- Current Year ----
