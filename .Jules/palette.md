@@ -1,0 +1,3 @@
+## 2026-06-21 - Adding Skip-to-Content Links
+**Learning:** For single-page portfolio sites, navigating to the main content area (e.g. `#home`) using a keyboard is a basic accessibility requirement that is frequently overlooked, especially since many users rely on screen readers or keyboard navigation. Adding a "Skip to main content" link makes navigation significantly faster for these users.
+**Action:** Always ensure a visually hidden (but focusable via keyboard) skip link is placed immediately after the `<body>` tag. Use styling (e.g., `-translate-y-[150%] focus:translate-y-4`) to reveal it cleanly upon focus.
