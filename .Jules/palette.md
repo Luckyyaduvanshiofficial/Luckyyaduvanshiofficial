@@ -1,0 +1,3 @@
+## 2024-03-21 - [Accessibility] Tailwind CSS Focus Rings
+**Learning:** Tailwind CSS resets default browser focus outlines, making interactive elements invisible to keyboard users when focused.
+**Action:** Always explicitly add `focus:` or `focus-visible:` classes (e.g., `focus:outline-none focus:ring-2 focus:ring-brand-teal`) to interactive elements like buttons and links to ensure keyboard accessibility.
