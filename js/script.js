@@ -77,16 +77,39 @@
         // ---- Contact Form (Demo) ----
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitBtnText = document.getElementById('submitBtnText');
+        const submitBtnIconWrapper = document.getElementById('submitBtnIconWrapper');
+        const submitBtnSpinnerWrapper = document.getElementById('submitBtnSpinnerWrapper');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            formMessage.classList.remove('hidden');
-            formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400';
-            formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
-            contactForm.reset();
+
+            // Set loading state
+            submitBtn.disabled = true;
+            submitBtnText.textContent = 'Sending...';
+            submitBtnIconWrapper.classList.add('hidden');
+            submitBtnSpinnerWrapper.classList.remove('hidden');
+            formMessage.classList.add('hidden');
+
+            // Simulate network request
             setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtnText.textContent = 'Send Message';
+                submitBtnIconWrapper.classList.remove('hidden');
+                submitBtnSpinnerWrapper.classList.add('hidden');
+
+                // Show success message
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 mt-4';
+                formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
+                contactForm.reset();
+
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
         });
 
         // ---- Current Year ----

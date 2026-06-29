@@ -1,0 +1,3 @@
+## 2024-05-18 - Contact Form Submission UX & Accessibility
+**Learning:** This repository's contact form lacked an explicit loading state and `aria-live` region, leading to potential duplicate submissions by users who aren't visually aware the form is processing, and preventing screen readers from announcing the success message properly when it dynamically appears.
+**Action:** Always add `aria-live="polite"` to dynamically appearing status message containers (like `#formMessage`) and implement explicit disabled/loading states with visual indicators (spinners) during async operations like form submissions.
