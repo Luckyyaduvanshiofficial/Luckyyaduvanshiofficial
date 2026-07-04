@@ -371,8 +371,9 @@
                 </button>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="Toggle menu">
-                    <span class="iconify" data-icon="lucide:menu" data-width="16"></span>
+                <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:outline-none transition-colors duration-300" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <span id="menuIconOpen" class="flex"><span class="iconify" data-icon="lucide:menu" data-width="16"></span></span>
+                    <span id="menuIconClose" class="hidden"><span class="iconify" data-icon="lucide:x" data-width="16"></span></span>
                 </button>
 
                 <!-- CTA Button -->
