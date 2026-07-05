@@ -1,0 +1,3 @@
+## 2026-07-05 - [Add keyboard focus rings & mobile menu ARIA states]
+**Learning:** Tailwind CSS resets default browser focus outlines, making it critical to explicitly add `focus:` or `focus-visible:` classes (e.g., `focus-visible:ring-2 focus-visible:ring-brand-teal`) to all interactive elements to ensure keyboard accessibility. Also, toggle buttons controlling content visibility (like mobile menus) require dynamic `aria-expanded` attributes for screen reader clarity.
+**Action:** When building or auditing Tailwind projects, proactively check navigation links and custom buttons for explicit focus states, and bind `aria-expanded` attributes to the JavaScript state of collapsible elements.
