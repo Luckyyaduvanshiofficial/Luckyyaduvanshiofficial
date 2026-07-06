@@ -1,0 +1,3 @@
+## 2024-05-24 - Dynamic ARIA Attributes for Mobile Toggles
+**Learning:** When using custom javascript to toggle the visibility of a mobile menu or accordion, statically defining `aria-expanded="false"` in the HTML is insufficient. The attribute must be dynamically updated in javascript alongside the visual state toggle to provide accurate information to screen reader users. Additionally, Tailwind resets default browser focus outlines, so explicit `focus-visible:` classes must be added to interactive elements to ensure keyboard navigability.
+**Action:** Always bind `aria-expanded` attributes to the javascript state variable (or class list check) that controls visibility for togglable elements, and apply `focus-visible:` utilities to all custom buttons.
