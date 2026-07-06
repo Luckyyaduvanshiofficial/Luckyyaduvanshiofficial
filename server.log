@@ -1,0 +1,6 @@
+127.0.0.1 - - [06/Jul/2026 16:59:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jul/2026 16:59:09] "GET /css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jul/2026 16:59:09] "GET /images/Lucky-main-1.png HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jul/2026 16:59:09] "GET /js/script.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jul/2026 16:59:09] "GET /images/lucky-main-2.png HTTP/1.1" 200 -
+127.0.0.1 - - [06/Jul/2026 16:59:10] "GET /images/Lucky-colage.png HTTP/1.1" 200 -
