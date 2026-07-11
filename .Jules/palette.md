@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Element Accessibility
+**Learning:** Tailwind CSS frequently removes default browser focus outlines (e.g., via `reset` styles), which can hide keyboard focus on interactive elements like buttons. Furthermore, toggle buttons for hidden content must explicitly bind `aria-expanded` to their JavaScript state for screen readers to properly interpret the toggle action.
+**Action:** Always explicitly add focus classes (`focus:ring-2 focus:ring-brand-teal focus:outline-none`) to interactive elements, and update their ARIA attributes dynamically via JavaScript when controlling layout changes.
