@@ -1,0 +1,3 @@
+## 2026-07-12 - Dynamic ARIA States and Focus on Tailwind Toggle Buttons
+**Learning:** When using Tailwind to style interactive elements like mobile menus that toggle content visibility, relying on visual state alone (e.g. `hidden`) is insufficient for screen readers. Explicit `aria-expanded` attributes must be bound to the JS state. Furthermore, Tailwind's reset removes default browser focus rings, making keyboard navigation difficult unless explicit `focus-visible:` classes are added.
+**Action:** Always ensure toggle buttons have dynamic `aria-expanded` bindings in JavaScript and apply `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal` to ensure proper accessibility for keyboard and screen reader users.
