@@ -1,0 +1,3 @@
+## 2024-05-17 - Dynamic ARIA Attributes for Visibility Toggles
+**Learning:** For toggle buttons controlling visibility (like mobile menus or accordions), a static `aria-expanded` is insufficient. The attribute must be dynamically bound to the JavaScript state of the collapsible element. Furthermore, because Tailwind CSS resets default browser focus outlines, explicit focus classes (like `focus:outline-none focus-visible:ring-2`) are necessary for keyboard accessibility.
+**Action:** When auditing or implementing toggle buttons, verify that `aria-expanded` updates dynamically in JS and that explicit focus indicators are present.
