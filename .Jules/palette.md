@@ -1,0 +1,3 @@
+## 2024-07-19 - Accessibility for Icon-only Buttons
+**Learning:** Tailwind CSS resets default browser focus outlines. This hides keyboard navigation focus states on icon-only buttons (like theme toggles and mobile menu buttons) making them inaccessible. Additionally, mobile menu toggles need dynamic `aria-expanded` bindings matching their JavaScript state so screen readers accurately announce their current state.
+**Action:** Explicitly add `focus-visible:` utilities (e.g. `focus-visible:ring-2 focus-visible:outline-none`) to interactive elements. Bind `aria-expanded` dynamically in JS based on the toggled element's visibility.
