@@ -1,0 +1,3 @@
+## 2024-07-24 - Accessibility bindings for manual UI toggles
+**Learning:** In repositories where UI elements like mobile menus or accordions are toggled manually via vanilla JavaScript class manipulation (e.g. `classList.toggle('hidden')`), screen readers do not automatically detect the visibility change without explicit ARIA attributes.
+**Action:** Always ensure that toggle buttons controlling content visibility have a dynamic `aria-expanded` attribute in HTML that is actively kept in sync with the content's state via JavaScript (e.g., using the boolean return value of `classList.toggle()` to set `aria-expanded`).
