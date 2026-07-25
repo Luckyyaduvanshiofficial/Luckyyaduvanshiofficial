@@ -1,0 +1,3 @@
+## 2026-07-25 - Tailwind CSS Form and Button Outline Accessibility Pattern
+**Learning:** Tailwind CSS resets default browser focus outlines, which creates an accessibility regression where keyboard users lose visible focus indicators on interactive elements like icon-only buttons, form submits, and accordions unless explicitly styled.
+**Action:** Always add explicit focus-visible classes (e.g. `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal`) to all interactive elements, particularly when using a custom Tailwind design system that lacks default base component styles.
