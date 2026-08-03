@@ -1,0 +1,3 @@
+## 2024-11-21 - Mobile Menu ARIA State
+**Learning:** When implementing toggle buttons that control content visibility (like mobile menus or accordions), it is critical to map the `aria-expanded` attribute strictly to the presence of the visibility class (e.g. `hidden`) and update the attribute across *all* code paths/event listeners where visibility can change (e.g., closing a menu by clicking an internal link).
+**Action:** Always verify that internal interactions that hide elements (like navigation clicks) also sync corresponding `aria-expanded` attributes on the controller.
