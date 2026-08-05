@@ -17,14 +17,21 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
+        function updateMobileMenuAria() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+        }
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            updateMobileMenuAria();
         });
 
         // Close mobile menu on link click
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                updateMobileMenuAria();
             });
         });
 
