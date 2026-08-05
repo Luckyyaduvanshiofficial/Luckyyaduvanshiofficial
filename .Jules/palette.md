@@ -1,0 +1,3 @@
+## 2024-08-05 - Mobile Menu Aria-Expanded Tracking
+**Learning:** When dealing with dynamic elements like mobile menus that can be toggled by buttons or closed by internal links, it is critical to ensure that `aria-expanded` attributes are updated on all events that trigger visibility change. Relying only on the toggle button click event will result in an incorrect state when the menu is closed by other means (e.g. clicking a link inside the menu).
+**Action:** Always create a centralized function (e.g. `updateMobileMenuAria`) that checks the element visibility class (e.g. `hidden`) and apply it across all code paths where visibility might change.
