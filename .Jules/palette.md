@@ -1,0 +1,3 @@
+## 2024-03-24 - Dynamic aria-expanded for Visibility Toggles
+**Learning:** When adding `aria-expanded` to control visibility (like a mobile menu), it's crucial to map it strictly to the presence of the CSS visibility class (e.g., `hidden`) rather than just toggling it, and to remember to update it across all code paths where the menu can be closed, such as clicking an internal nav link.
+**Action:** Always verify all event listeners that can close a toggled element to ensure the `aria-expanded` attribute is kept perfectly in sync with the element's actual visual state.
