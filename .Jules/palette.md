@@ -1,0 +1,3 @@
+## 2026-08-08 - Sync aria-expanded attributes with dynamic classes
+**Learning:** When adding `aria-expanded` to toggle buttons that control content visibility, it is critical to map this strictly to the presence of the visibility class (e.g. `hidden`) and update the attribute across *all* code paths/event listeners where visibility can change (e.g., closing a menu by clicking an internal link), rather than just the toggle button's click handler.
+**Action:** Always inspect the associated JavaScript for alternative ways the toggled content can close, and add logic to set `aria-expanded="false"` in those additional event listeners to maintain accessibility state accuracy.
