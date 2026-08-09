@@ -1,0 +1,3 @@
+## 2024-08-09 - Dynamic ARIA States on Mobile Menu Toggles
+**Learning:** When using vanilla JavaScript to toggle CSS visibility classes (like Tailwind's `hidden`) on elements like mobile menus, `aria-expanded` attributes must be mapped strictly to the presence of that class across *all* code paths where visibility can change. Specifically, closing a menu by clicking an internal link must explicitly reset `aria-expanded="false"` on the toggle button, otherwise screen readers will report the menu as still open.
+**Action:** Always verify that dynamic ARIA attributes are updated in every event listener (e.g., both the main toggle click and any "close on interaction" behaviors) when adding or modifying toggle UI patterns.
