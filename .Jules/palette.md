@@ -1,0 +1,3 @@
+## 2026-08-13 - Dynamic ARIA Attributes on Visibility Toggles
+**Learning:** When implementing or auditing toggle buttons that control content visibility via CSS classes (like mobile menus hidden with Tailwind's 'hidden' class), the 'aria-expanded' attribute must dynamically mirror the actual visibility state to remain accurate for screen readers. Static 'aria-expanded' values lead to confusing a11y states.
+**Action:** Always map 'aria-expanded' strictly to the presence/absence of the visibility class and ensure this is updated across *all* event listeners where visibility can change (e.g., closing a menu by clicking an internal link, not just the main toggle button).
