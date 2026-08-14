@@ -1,0 +1,3 @@
+## 2024-10-26 - Dynamic ARIA Expansion on Multi-Trigger Visibility Toggles
+**Learning:** When managing visibility of elements like mobile menus (e.g. toggling a `hidden` class), the trigger button's `aria-expanded` state must be strictly mapped to the presence of that class. Crucially, this state synchronization must happen not only in the main trigger event listener, but across *all* code paths where the menu's visibility can change, such as when closing the menu by clicking an internal link.
+**Action:** When implementing or auditing toggle buttons controlling content visibility, ensure dynamic `aria-expanded` attributes are added and updated across all event listeners that can alter the element's visibility.
