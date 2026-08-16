@@ -1,0 +1,3 @@
+## 2024-05-18 - Aria Expanded on Hidden Classes
+**Learning:** In this application's custom vanilla JS and Tailwind architecture, interactive elements like mobile menus often rely on adding/removing the 'hidden' class. This creates an accessibility gap for screen readers.
+**Action:** When working on elements that toggle visibility (like menus or accordions) in this app, ensure `aria-expanded` is explicitly mapped to the presence/absence of the visibility class, and updated across all event paths (e.g., toggle buttons AND internal close links).
