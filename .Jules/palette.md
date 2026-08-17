@@ -1,0 +1,3 @@
+## 2026-08-17 - Dynamic ARIA attributes on toggles
+**Learning:** When implementing visibility toggles (like mobile menus) with a state class like 'hidden', the `aria-expanded` attribute on the toggle button must dynamically update. It's critical to update this attribute not just when clicking the toggle button, but across *all* code paths where visibility can change (such as clicking a link inside the menu to close it).
+**Action:** Always map `aria-expanded` strictly to the presence/absence of the visibility class in JS, and ensure all event listeners that close/open the element also update the button's ARIA state.
