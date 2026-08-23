@@ -1,0 +1,3 @@
+## 2026-08-23 - Dynamic aria-expanded mapped to visibility classes
+**Learning:** When implementing toggle buttons that control content visibility (like mobile menus), dynamic `aria-expanded` attributes must be strictly mapped to the presence of the visibility class (e.g., `hidden`). It is critical to update this attribute across *all* code paths where visibility can change, such as closing a menu by clicking an internal link.
+**Action:** Always ensure `aria-expanded` is updated in every event listener that alters the visibility state of the controlled element, not just the primary toggle button.
