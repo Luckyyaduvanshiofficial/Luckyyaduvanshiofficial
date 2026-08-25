@@ -1,0 +1,3 @@
+## 2026-08-25 - Focus and Accessibility on Interactive Tailwind Elements
+**Learning:** Tailwind CSS resets default browser focus outlines. Interactive elements (like buttons) must explicitly include focus styles (e.g., `focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal`) for keyboard accessibility. Additionally, visibility toggles for components like mobile menus must be strictly mapped to dynamic `aria-expanded` attributes across all event listeners.
+**Action:** Always add explicit focus classes to interactive elements in Tailwind projects. Ensure any visibility toggling JavaScript logic concurrently updates corresponding ARIA attributes.
