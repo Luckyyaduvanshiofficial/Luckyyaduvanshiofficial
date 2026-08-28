@@ -1,0 +1,3 @@
+## 2026-08-28 - [Dynamic Aria-Expanded Attributes on Toggle Elements]
+**Learning:** [When implementing toggle buttons that control content visibility (like mobile menus or accordions), it is critical to dynamically update the `aria-expanded` attribute. The attribute must map strictly to the presence of the visibility class (e.g. `hidden`) and be updated across all code paths where visibility can change, including closing the menu by clicking an internal link.]
+**Action:** [Always ensure dynamic synchronization of `aria-expanded` attributes based on the actual visual state, not just button clicks, to prevent screen readers from announcing an incorrect state.]
