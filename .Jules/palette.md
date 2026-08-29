@@ -1,0 +1,3 @@
+## 2024-08-29 - Mobile Menu State Management
+**Learning:** For components with complex visibility logic (like mobile menus controlled both by toggle buttons and internal link clicks), ensuring `aria-expanded` accurately reflects state across all interaction paths is crucial for screen readers. Simply toggling it on the button click is insufficient if internal links can also close the menu.
+**Action:** Always audit all event listeners that can mutate the visibility state of a component (e.g., toggle buttons, close buttons, internal link clicks, escape key) and ensure the corresponding `aria-expanded` attribute is dynamically updated in every path.
