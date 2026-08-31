@@ -1,0 +1,3 @@
+## 2026-08-31 - Dynamic ARIA Expansion on Mobile Menus
+**Learning:** When implementing or auditing toggle buttons that control content visibility (like mobile menus or accordions), always ensure they have dynamic `aria-expanded` attributes. It is critical to map this strictly to the presence of the visibility class (e.g. `hidden`) and update the attribute across *all* code paths/event listeners where visibility can change (e.g., closing a menu by clicking an internal link).
+**Action:** Use `setAttribute('aria-expanded', !isHidden)` logically in toggle events, and explicitly set it to `'false'` when explicitly closing the menu in link clicks.
