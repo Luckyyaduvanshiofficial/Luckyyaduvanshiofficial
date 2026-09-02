@@ -1,0 +1,3 @@
+## 2024-09-02 - Synchronizing aria-expanded with dynamic visibility
+**Learning:** When toggling the visibility of UI components (like a mobile menu) through multiple event listeners (e.g., clicking a toggle button vs clicking an internal link to close), the `aria-expanded` attribute on the control button can easily fall out of sync with the actual state if not updated consistently across all code paths.
+**Action:** Always ensure that any JavaScript manipulating visibility classes (like `hidden`) explicitly updates the corresponding `aria-expanded` attributes to match the new state, and consider wrapping the toggle logic into a single function if called from multiple places.
