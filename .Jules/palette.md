@@ -1,0 +1,3 @@
+## 2026-09-03 - aria-expanded Dynamic Sync in Vanilla JS
+**Learning:** When using vanilla JavaScript to toggle UI elements (like `.hidden` classes on a mobile menu), accessibility tools rely entirely on accurate, manual mapping of `aria-expanded`. Failing to update the aria state when a menu closes (e.g. from an internal link click) breaks the screen reader experience.
+**Action:** Always ensure that `aria-expanded` is updated dynamically, mapping strictly to the presence or absence of the visibility class, and updated across *all* code paths (e.g., both button clicks and link clicks inside the menu).
