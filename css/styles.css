@@ -711,6 +711,12 @@ section[id] {
 /* ============================================================
    REDUCED MOTION — Accessibility
    ============================================================ */
+@media (max-width: 640px) {
+    .hero-glow {
+        padding-top: 130px !important;
+        padding-bottom: 3rem !important;
+    }
+}
 @media (prefers-reduced-motion: reduce) {
     body::before,
     body::after,
