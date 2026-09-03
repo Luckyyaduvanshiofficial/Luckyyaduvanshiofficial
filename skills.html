@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Canonical URL for this page -->
     <link rel="canonical" href="https://luckyyaduvanshi.in/skills.html">
 
-    <!-- Primary SEO Meta -->
     <title>Skills of Lucky Yaduvanshi | Python FastAPI Developer | SQL, Databases & More</title>
     <meta name="description" content="Full skills and technologies of Lucky Yaduvanshi, Python FastAPI Developer from Jaipur, India. Mastery in FastAPI, Python, SQL, PostgreSQL, MySQL, SQLAlchemy, Redis, Docker, REST APIs, and Astro.js frontend.">
     <meta name="keywords" content="Lucky Yaduvanshi skills, Lucky Yaduvanshi FastAPI, Python FastAPI Developer skills, FastAPI skills, Python backend skills, SQL, PostgreSQL, MySQL, SQLAlchemy, Docker, Redis, Astro.js, Lucky Yaduvanshi technologies, Lucky Yaduvanshi Official skills">
@@ -53,13 +51,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/Lucky-main-1.png">
     <link rel="apple-touch-icon" href="/images/Lucky-main-1.png">
-
-    <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
 
-    <!-- ============================================================
-         JSON-LD STRUCTURED DATA — Person + Skills
-         ============================================================ -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -91,19 +85,17 @@
     }
     </script>
 
-    <!-- ============================================================
-         STYLESHEETS
-         ============================================================ -->
+    <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://code.iconify.design">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://code.iconify.design">
 
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
 
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
 
@@ -129,54 +121,58 @@
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans transition-colors duration-300">
 
+    <!-- Noise texture overlay -->
+    <div class="noise-overlay"></div>
+    <div class="mesh-orb"></div>
+
     <!-- ============================================================
          NAVIGATION
          ============================================================ -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel bg-white/80 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 backdrop-blur-xl">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-panel bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50">
         <div class="max-w-[1440px] mx-auto px-6 xl:px-[120px] h-[72px] flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group" aria-label="Lucky Yaduvanshi Official - Home">
-                <div class="w-9 h-9 rounded-lg bg-brand-teal flex items-center justify-center text-white font-semibold text-sm group-hover:bg-brand-teal-hover transition-colors duration-300">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-teal to-teal-400 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-teal-500/20 group-hover:shadow-teal-500/40 transition-shadow duration-300">
                     LY
                 </div>
-                <span class="font-semibold text-sm tracking-tight hidden sm:block">Lucky Yaduvanshi <span class="text-brand-teal">Official</span></span>
+                <span class="font-bold text-sm tracking-tight hidden sm:block">Lucky Yaduvanshi <span class="gradient-text">Official</span></span>
             </a>
 
-            <div class="hidden md:flex items-center gap-8">
-                <a href="index.html#home" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Home</a>
-                <a href="index.html#about" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">About</a>
-                <a href="skills.html" class="nav-link active relative text-sm font-medium text-brand-teal transition-colors duration-300">Skills</a>
-                <a href="index.html#projects" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Projects</a>
-                <a href="index.html#social" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Social</a>
-                <a href="index.html#faq" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">FAQ</a>
-                <a href="index.html#contact" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Contact</a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html#home" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">Home</a>
+                <a href="index.html#about" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">About</a>
+                <a href="skills.html" class="nav-link active relative text-sm font-medium text-brand-teal px-3 py-2 rounded-lg bg-brand-teal/5 transition-all duration-300">Skills</a>
+                <a href="index.html#projects" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">Projects</a>
+                <a href="index.html#social" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">Social</a>
+                <a href="index.html#faq" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">FAQ</a>
+                <a href="index.html#contact" class="nav-link relative text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal dark:hover:text-brand-teal px-3 py-2 rounded-lg hover:bg-brand-teal/5 transition-all duration-300">Contact</a>
             </div>
 
             <div class="flex items-center gap-3">
-                <button id="themeToggle" class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="Toggle dark mode">
+                <button id="themeToggle" class="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300" aria-label="Toggle dark mode">
                     <span class="iconify dark:hidden" data-icon="lucide:moon" data-width="16"></span>
                     <span class="iconify hidden dark:inline-block" data-icon="lucide:sun" data-width="16"></span>
                 </button>
 
-                <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="Toggle menu">
+                <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300" aria-label="Toggle menu">
                     <span class="iconify" data-icon="lucide:menu" data-width="16"></span>
                 </button>
 
-                <a href="index.html#contact" class="hidden sm:inline-flex items-center gap-2 bg-brand-teal text-white text-sm font-semibold rounded-full py-2.5 px-5 hover:bg-brand-teal-hover transition-colors duration-300 shadow-lg shadow-teal-900/10">
+                <a href="index.html#contact" class="hidden sm:inline-flex items-center gap-2 bg-brand-teal text-white text-sm font-semibold rounded-full py-2.5 px-6 hover:bg-brand-teal-hover transition-all duration-300">
                     <span class="iconify" data-icon="lucide:mail" data-width="14"></span>
                     Hire Me
                 </a>
             </div>
         </div>
 
-        <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-6 py-4">
-            <div class="flex flex-col gap-3">
-                <a href="index.html#home" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">Home</a>
-                <a href="index.html#about" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">About</a>
-                <a href="skills.html" class="mobile-nav-link text-sm font-medium text-brand-teal py-2 transition-colors">Skills</a>
-                <a href="index.html#projects" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">Projects</a>
-                <a href="index.html#social" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">Social</a>
-                <a href="index.html#faq" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">FAQ</a>
-                <a href="index.html#contact" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal py-2 transition-colors">Contact</a>
+        <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl px-6 py-4">
+            <div class="flex flex-col gap-1">
+                <a href="index.html#home" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">Home</a>
+                <a href="index.html#about" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">About</a>
+                <a href="skills.html" class="mobile-nav-link text-sm font-medium text-brand-teal py-2.5 px-3 rounded-lg bg-brand-teal/5 transition-all">Skills</a>
+                <a href="index.html#projects" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">Projects</a>
+                <a href="index.html#social" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">Social</a>
+                <a href="index.html#faq" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">FAQ</a>
+                <a href="index.html#contact" class="mobile-nav-link text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal hover:bg-brand-teal/5 py-2.5 px-3 rounded-lg transition-all">Contact</a>
             </div>
         </div>
     </nav>
@@ -184,28 +180,32 @@
     <!-- ============================================================
          PAGE HEADER / HERO
          ============================================================ -->
-    <section class="hero-glow pt-[144px] pb-12 px-6 xl:px-0">
+    <section class="hero-glow pt-[144px] pb-16 px-6 xl:px-0">
         <div class="max-w-[1200px] mx-auto">
-            <nav class="text-xs text-slate-500 dark:text-slate-400 mb-6" aria-label="Breadcrumb">
+            <!-- Breadcrumb -->
+            <nav class="text-xs text-slate-500 dark:text-slate-400 mb-8 reveal" aria-label="Breadcrumb">
                 <ol class="flex items-center gap-2">
-                    <li><a href="index.html" class="hover:text-brand-teal transition-colors">Home</a></li>
+                    <li><a href="index.html" class="hover:text-brand-teal transition-colors font-medium">Home</a></li>
                     <li><span class="iconify" data-icon="lucide:chevron-right" data-width="12"></span></li>
-                    <li class="text-slate-700 dark:text-slate-300" aria-current="page">Skills</li>
+                    <li class="text-slate-700 dark:text-slate-300 font-semibold" aria-current="page">Skills</li>
                 </ol>
             </nav>
 
-            <span class="text-xs font-medium uppercase tracking-wide text-brand-teal mb-3 block">Skills & Technologies</span>
-            <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight mb-4">Python FastAPI <span class="gradient-text">Skill Stack</span></h1>
-            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mb-6">
-                The complete toolkit I use to build scalable, production-ready backend systems as a <strong class="text-slate-800 dark:text-slate-200">Python FastAPI Developer</strong> — from SQL databases and API design to containerization and deployment.
+            <div class="section-label inline-flex mb-4 reveal">
+                <span class="iconify" data-icon="lucide:code-2" data-width="12"></span>
+                Skills & Technologies
+            </div>
+            <h1 class="section-title text-4xl sm:text-5xl lg:text-[3.5rem] mb-5 reveal">Python FastAPI <span class="gradient-text">Skill Stack</span></h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mb-8 reveal">
+                The complete toolkit I use to build scalable, production-ready backend systems as a <strong class="text-slate-800 dark:text-slate-200 font-semibold">Python FastAPI Developer</strong> — from SQL databases and API design to containerization and deployment.
             </p>
-            <div class="flex flex-wrap gap-2">
-                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-brand-teal text-white text-sm font-semibold rounded-full py-2.5 px-5 hover:bg-brand-teal-hover transition-colors duration-300">
-                    <span class="iconify" data-icon="lucide:briefcase" data-width="14"></span>
+            <div class="flex flex-wrap gap-3 reveal">
+                <a href="index.html#contact" class="inline-flex items-center gap-2.5 bg-brand-teal text-white text-sm font-semibold rounded-full py-3.5 px-7 hover:bg-brand-teal-hover transition-all duration-300">
+                    <span class="iconify" data-icon="lucide:briefcase" data-width="16"></span>
                     Hire Me
                 </a>
-                <a href="index.html#projects" class="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-full py-2.5 px-5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-300">
-                    <span class="iconify" data-icon="lucide:code-2" data-width="14"></span>
+                <a href="index.html#projects" class="btn-ghost inline-flex items-center gap-2 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-full py-3.5 px-7 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300">
+                    <span class="iconify" data-icon="lucide:code-2" data-width="16"></span>
                     View Projects
                 </a>
             </div>
@@ -215,38 +215,41 @@
     <!-- ============================================================
          CORE LANGUAGES & FRAMEWORKS
          ============================================================ -->
-    <section class="py-12 px-6 xl:px-0">
+    <section class="py-16 px-6 xl:px-0">
         <div class="max-w-[1200px] mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-xs font-medium uppercase tracking-wide text-brand-teal mb-3 block">Core Stack</span>
-                <h2 class="text-3xl font-semibold tracking-tight mb-3">Languages & Frameworks</h2>
+            <div class="text-center mb-14 reveal">
+                <div class="section-label inline-flex mx-auto">
+                    <span class="iconify" data-icon="lucide:cpu" data-width="12"></span>
+                    Core Stack
+                </div>
+                <h2 class="section-title mt-3 mb-3">Languages & Frameworks</h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Python -->
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal p-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4 border border-blue-100 dark:border-blue-800/20">
                         <span class="iconify text-blue-600 dark:text-blue-400" data-icon="mdi:language-python" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Python</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Python</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Core language for all backend development. Deep understanding of async/await, OOP, type hints, decorators, and standard library.</p>
                 </article>
 
                 <!-- FastAPI -->
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-brand-teal/40 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6" style="border: 1px solid rgba(13, 148, 136, 0.25);">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="mdi:fast-forward" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">FastAPI</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">FastAPI</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Primary web framework. High-performance async REST APIs, automatic OpenAPI docs, dependency injection, and Pydantic validation.</p>
                 </article>
 
                 <!-- Astro.js -->
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mb-4 border border-purple-100 dark:border-purple-800/20">
                         <span class="iconify text-purple-600 dark:text-purple-400" data-icon="mdi:astro" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Astro.js</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Astro.js</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Frontend framework. Building fast, SEO-friendly static and dynamic websites that connect seamlessly to FastAPI backends.</p>
                 </article>
             </div>
@@ -256,66 +259,63 @@
     <!-- ============================================================
          DATABASES & SQL
          ============================================================ -->
-    <section class="py-12 px-6 xl:px-0 bg-white dark:bg-slate-900">
+    <section class="py-16 px-6 xl:px-0 bg-white dark:bg-slate-900/50">
         <div class="max-w-[1200px] mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-xs font-medium uppercase tracking-wide text-brand-teal mb-3 block">Databases & SQL</span>
-                <h2 class="text-3xl font-semibold tracking-tight mb-3">Data Storage & Querying</h2>
-                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Designing, optimizing, and managing relational and in-memory databases that power real applications.</p>
+            <div class="text-center mb-14 reveal">
+                <div class="section-label inline-flex mx-auto">
+                    <span class="iconify" data-icon="lucide:database" data-width="12"></span>
+                    Databases & SQL
+                </div>
+                <h2 class="section-title mt-3 mb-3">Data Storage & Querying</h2>
+                <p class="section-subtitle mx-auto">Designing, optimizing, and managing relational and in-memory databases that power real applications.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- SQL -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal p-6">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center mb-4 border border-orange-100 dark:border-orange-800/20">
                         <span class="iconify text-orange-600 dark:text-orange-400" data-icon="mdi:database-outline" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">SQL</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">SQL</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Structured Query Language for relational databases — complex joins, subqueries, window functions, indexes, and query optimization.</p>
                 </article>
 
-                <!-- PostgreSQL -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/20 flex items-center justify-center mb-4 border border-sky-100 dark:border-sky-800/20">
                         <span class="iconify text-sky-600 dark:text-sky-400" data-icon="mdi:elephant" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">PostgreSQL</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">PostgreSQL</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Primary SQL database. JSONB, full-text search, advanced indexing, transactions, and ACID compliance for reliable data storage.</p>
                 </article>
 
-                <!-- MySQL -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center mb-4 border border-cyan-100 dark:border-cyan-800/20">
                         <span class="iconify text-cyan-600 dark:text-cyan-400" data-icon="mdi:database" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">MySQL</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">MySQL</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Popular relational database for web applications. Schema design, normalization, stored procedures, and performance tuning.</p>
                 </article>
 
-                <!-- SQLAlchemy -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center mb-4 border border-emerald-100 dark:border-emerald-800/20">
                         <span class="iconify text-emerald-600 dark:text-emerald-400" data-icon="mdi:layers-triple-outline" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">SQLAlchemy</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">SQLAlchemy</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">ORM for Python. Object-relational mapping, model relationships, migrations with Alembic, and async sessions with FastAPI.</p>
                 </article>
 
-                <!-- Alembic -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center mb-4 border border-indigo-100 dark:border-indigo-800/20">
                         <span class="iconify text-indigo-600 dark:text-indigo-400" data-icon="mdi:source-branch" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Alembic</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Alembic</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Database migration tool for SQLAlchemy. Versioned schema migrations, rollbacks, and safe schema evolution across environments.</p>
                 </article>
 
-                <!-- Redis -->
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-3 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center mb-4 border border-red-100 dark:border-red-800/20">
                         <span class="iconify text-red-600 dark:text-red-400" data-icon="mdi:database-refresh" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Redis</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Redis</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">In-memory data store for caching, session management, rate limiting, and message queuing to boost application performance.</p>
                 </article>
             </div>
@@ -325,59 +325,62 @@
     <!-- ============================================================
          API DEVELOPMENT
          ============================================================ -->
-    <section class="py-12 px-6 xl:px-0">
+    <section class="py-16 px-6 xl:px-0">
         <div class="max-w-[1200px] mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-xs font-medium uppercase tracking-wide text-brand-teal mb-3 block">APIs</span>
-                <h2 class="text-3xl font-semibold tracking-tight mb-3">API Design & Development</h2>
+            <div class="text-center mb-14 reveal">
+                <div class="section-label inline-flex mx-auto">
+                    <span class="iconify" data-icon="lucide:route" data-width="12"></span>
+                    APIs
+                </div>
+                <h2 class="section-title mt-3 mb-3">API Design & Development</h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:route" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">REST API Design</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">REST API Design</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Clean, consistent RESTful endpoints with proper HTTP methods, status codes, resource naming, versioning, and error handling.</p>
                 </article>
 
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:shield-check" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">JWT & OAuth2</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">JWT & OAuth2</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Secure authentication with python-jose, JWT access/refresh tokens, OAuth2 password flow, and role-based access control.</p>
                 </article>
 
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:file-check" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Pydantic</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Pydantic</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Data validation and serialization. FastAPI's native data layer for request/response models with automatic OpenAPI schema generation.</p>
                 </article>
 
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:test-tube" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Testing (pytest)</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Testing (pytest)</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Comprehensive test suites with pytest, TestClient, mocking, and fixture-based testing for reliable, bug-free APIs.</p>
                 </article>
 
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:gauge" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Async & Performance</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Async & Performance</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Asynchronous background tasks, FastAPI background tasks, WebSockets, and performance optimization for high-traffic APIs.</p>
                 </article>
 
-                <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-3 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4 border border-brand-teal/15">
                         <span class="iconify text-brand-teal" data-icon="lucide:book-open" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">OpenAPI & Docs</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">OpenAPI & Docs</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Automatic, interactive API documentation with Swagger UI and ReDoc generated by FastAPI/OpenAPI standards.</p>
                 </article>
             </div>
@@ -387,59 +390,62 @@
     <!-- ============================================================
          DEV OPS & TOOLS
          ============================================================ -->
-    <section class="py-12 px-6 xl:px-0 bg-white dark:bg-slate-900">
+    <section class="py-16 px-6 xl:px-0 bg-white dark:bg-slate-900/50">
         <div class="max-w-[1200px] mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-xs font-medium uppercase tracking-wide text-brand-teal mb-3 block">DevOps & Tools</span>
-                <h2 class="text-3xl font-semibold tracking-tight mb-3">Deployment & Workflow</h2>
+            <div class="text-center mb-14 reveal">
+                <div class="section-label inline-flex mx-auto">
+                    <span class="iconify" data-icon="lucide:settings" data-width="12"></span>
+                    DevOps & Tools
+                </div>
+                <h2 class="section-title mt-3 mb-3">Deployment & Workflow</h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal p-6">
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/20 flex items-center justify-center mb-4 border border-sky-100 dark:border-sky-800/20">
                         <span class="iconify text-sky-600 dark:text-sky-400" data-icon="mdi:docker" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Docker</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Docker</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Containerization of FastAPI apps and databases. Dockerfiles, docker-compose for multi-service setups, and reproducible environments.</p>
                 </article>
 
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center mb-4">
-                        <span class="iconify text-white" data-icon="mdi:github" data-width="24"></span>
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-gray-800 dark:bg-gray-200 flex items-center justify-center mb-4">
+                        <span class="iconify text-white dark:text-gray-800" data-icon="mdi:github" data-width="24"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Git & GitHub</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Git & GitHub</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Version control, branching strategies, pull requests, code reviews, and GitHub Actions for CI/CD pipelines.</p>
                 </article>
 
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center mb-4 border border-yellow-100 dark:border-yellow-800/20">
                         <span class="iconify text-yellow-600 dark:text-yellow-400" data-icon="lucide:cloud" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">AWS & Cloud Basics</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">AWS & Cloud Basics</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Deploying and managing services on AWS — EC2, S3, RDS. Environment configuration and cloud-native deployment practices.</p>
                 </article>
 
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-1 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4 border border-blue-100 dark:border-blue-800/20">
                         <span class="iconify text-blue-600 dark:text-blue-400" data-icon="mdi:linux" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Linux</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Linux</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Command-line productivity, server administration, process management, shell scripting, and production server setup.</p>
                 </article>
 
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-2 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center mb-4 border border-green-100 dark:border-green-800/20">
                         <span class="iconify text-green-600 dark:text-green-400" data-icon="lucide:settings" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Uvicorn & Gunicorn</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Uvicorn & Gunicorn</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">ASGI and WSGI servers. Production deployment of FastAPI with Uvicorn for async and Gunicorn for multi-worker scaling.</p>
                 </article>
 
-                <article class="card-hover bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mb-4">
+                <article class="project-card reveal reveal-delay-3 p-6">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mb-4 border border-teal-100 dark:border-teal-800/20">
                         <span class="iconify text-teal-600 dark:text-teal-400" data-icon="lucide:git-branch" data-width="26"></span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">CI/CD</h3>
+                    <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">CI/CD</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Automated build, test, and deployment pipelines. GitHub Actions workflows for consistent, repeatable releases.</p>
                 </article>
             </div>
@@ -449,19 +455,21 @@
     <!-- ============================================================
          CTA BANNER
          ============================================================ -->
-    <section class="py-16 px-6 xl:px-0">
+    <section class="py-20 px-6 xl:px-0">
         <div class="max-w-[1200px] mx-auto">
-            <div class="bg-gradient-to-br from-brand-teal to-brand-teal-hover rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden">
-                <div class="absolute -inset-4 bg-gradient-to-br from-white/10 to-transparent rounded-3xl blur-3xl"></div>
+            <div class="bg-gradient-to-br from-brand-teal via-teal-500 to-brand-teal-hover rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden reveal">
+                <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl"></div>
                 <div class="relative">
-                    <h2 class="text-3xl sm:text-4xl font-semibold text-white mb-4">Have a Project in Mind?</h2>
-                    <p class="text-white/80 max-w-2xl mx-auto mb-8">Let's build your next FastAPI backend, SQL database architecture, or high-performance API together. I'm available for freelance and full-time work.</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Have a Project in Mind?</h2>
+                    <p class="text-white/80 max-w-2xl mx-auto mb-8 text-lg">Let's build your next FastAPI backend, SQL database architecture, or high-performance API together. I'm available for freelance and full-time work.</p>
                     <div class="flex flex-wrap justify-center gap-3">
-                        <a href="index.html#contact" class="inline-flex items-center gap-2 bg-white text-brand-teal text-sm font-semibold rounded-full py-3 px-6 hover:bg-slate-50 transition-colors duration-300">
+                        <a href="index.html#contact" class="inline-flex items-center gap-2.5 bg-white text-brand-teal text-sm font-bold rounded-full py-3.5 px-7 hover:bg-slate-50 transition-all duration-300 shadow-xl shadow-black/10">
                             <span class="iconify" data-icon="lucide:mail" data-width="16"></span>
                             Get in Touch
                         </a>
-                        <a href="https://github.com/Luckyyaduvanshiofficial/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/40 text-white text-sm font-semibold rounded-full py-3 px-6 hover:bg-white/10 transition-colors duration-300">
+                        <a href="https://github.com/Luckyyaduvanshiofficial/" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 border-2 border-white/40 text-white text-sm font-bold rounded-full py-3.5 px-7 hover:bg-white/10 transition-all duration-300">
                             <span class="iconify" data-icon="lucide:github" data-width="16"></span>
                             View My GitHub
                         </a>
@@ -474,33 +482,33 @@
     <!-- ============================================================
          FOOTER
          ============================================================ -->
-    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-16 px-6 xl:px-0">
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-16 px-6 xl:px-0 border-t border-slate-800">
         <div class="max-w-[1200px] mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
                 <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-9 h-9 rounded-lg bg-brand-teal flex items-center justify-center text-white font-semibold text-sm">LY</div>
-                        <span class="font-semibold text-white">Lucky Yaduvanshi <span class="text-brand-teal">Official</span></span>
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-teal to-teal-400 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-teal-500/20">LY</div>
+                        <span class="font-bold text-white">Lucky Yaduvanshi <span class="text-brand-teal">Official</span></span>
                     </div>
-                    <p class="text-sm leading-relaxed max-w-sm mb-4">
+                    <p class="text-sm leading-relaxed max-w-sm mb-5">
                         Python FastAPI Developer from Jaipur, India. Specializing in FastAPI, Python, SQL, PostgreSQL, SQLAlchemy, Docker, and Astro.js. Building scalable backend systems.
                     </p>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
-                    <div class="space-y-2.5">
+                    <h4 class="text-sm font-bold text-white mb-5">Quick Links</h4>
+                    <div class="space-y-3">
                         <a href="index.html#home" class="block text-sm hover:text-brand-teal transition-colors">Home</a>
                         <a href="index.html#about" class="block text-sm hover:text-brand-teal transition-colors">About</a>
-                        <a href="skills.html" class="block text-sm text-brand-teal transition-colors">Skills</a>
+                        <a href="skills.html" class="block text-sm text-brand-teal font-semibold transition-colors">Skills</a>
                         <a href="index.html#projects" class="block text-sm hover:text-brand-teal transition-colors">Projects</a>
                         <a href="index.html#contact" class="block text-sm hover:text-brand-teal transition-colors">Contact</a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-semibold text-white mb-4">Social Profiles</h4>
-                    <div class="space-y-2.5">
+                    <h4 class="text-sm font-bold text-white mb-5">Social Profiles</h4>
+                    <div class="space-y-3">
                         <a href="https://instagram.com/_lucky_yaduvanshi_official/" target="_blank" rel="me noopener" class="block text-sm hover:text-brand-teal transition-colors">Instagram</a>
                         <a href="https://github.com/luckyyaduvanshiofficial" target="_blank" rel="me noopener" class="block text-sm hover:text-brand-teal transition-colors">GitHub</a>
                         <a href="https://www.linkedin.com/in/lucky-yaduvanshi/" target="_blank" rel="me noopener" class="block text-sm hover:text-brand-teal transition-colors">LinkedIn</a>
@@ -521,9 +529,6 @@
         </div>
     </footer>
 
-    <!-- ============================================================
-         JAVASCRIPT
-         ============================================================ -->
     <script src="js/script.js"></script>
 
 </body>
