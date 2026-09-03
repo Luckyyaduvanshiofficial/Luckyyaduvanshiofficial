@@ -9,11 +9,64 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* ----- Glass panels (reusable) ----- */
+/* ============================================================
+   Ambient background lighting (aurora orbs behind the whole page)
+   A fixed, soft light field that adds depth behind translucent
+   surfaces instead of a flat backdrop.
+   ============================================================ */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.55;
+    will-change: transform;
+}
+
+body::before {
+    top: -140px;
+    left: -120px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.35) 0%, transparent 70%);
+    animation: orbDrift 22s ease-in-out infinite alternate;
+}
+
+body::after {
+    bottom: -160px;
+    right: -140px;
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.25) 0%, transparent 70%);
+    animation: orbDrift 26s ease-in-out infinite alternate-reverse;
+}
+
+/* Stronger orbs in dark mode */
+.dark body::before { opacity: 0.7; }
+.dark body::after  { opacity: 0.6; }
+
+@keyframes orbDrift {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to   { transform: translate3d(40px, 30px, 0) scale(1.15); }
+}
+
+/* ============================================================
+   Glass panels — light comes from the top, soft inner highlight
+   + subtle bottom glow so the surface reads as lit glass.
+   ============================================================ */
 .glass-panel,
 .glass-panel-xl {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.dark .glass-panel,
+.dark .glass-panel-xl {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                0 18px 40px -20px rgba(0, 0, 0, 0.6);
 }
 
 .glass-panel-xl {
@@ -21,7 +74,24 @@
     -webkit-backdrop-filter: blur(24px);
 }
 
-/* ----- Hide scrollbar utility ----- */
+/* Navbar: anchored glass bar with a crisp underline light */
+#navbar {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                0 10px 30px -18px rgba(13, 148, 136, 0.45);
+}
+#navbar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.55), transparent);
+}
+
+/* ============================================================
+   Hide scrollbar utility
+   ============================================================ */
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -30,42 +100,173 @@
     display: none;
 }
 
-/* ----- Text gradient (brand) ----- */
+/* ============================================================
+   Text gradient (brand) with a subtle glow
+   ============================================================ */
 .gradient-text {
-    background: linear-gradient(135deg, #0d9488, #14b8a6, #0d9488);
+    background: linear-gradient(135deg, #0d9488, #14b8a6, #2dd4bf, #0d9488);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
 }
 
-/* ----- Section hero glow ----- */
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+}
+
+/* ============================================================
+   Section hero glow — a warm spotlight from the top of the hero
+   ============================================================ */
 .hero-glow {
-    background: radial-gradient(ellipse at 50% 0%, rgba(13, 148, 136, 0.15) 0%, transparent 60%);
+    position: relative;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(13, 148, 136, 0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.18) 0%, transparent 45%);
+}
+.hero-glow::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: -220px;
+    height: 320px;
+    background: radial-gradient(ellipse at center, rgba(13, 148, 136, 0.16) 0%, transparent 65%);
+    pointer-events: none;
+}
+.dark .hero-glow {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(13, 148, 136, 0.28) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.22) 0%, transparent 45%);
 }
 
-/* ----- Reusable card hover interaction ----- */
+/* Ambient lighting difference for alternating sections */
+#about,
+#social {
+    background-image:
+        radial-gradient(circle at 90% 10%, rgba(13, 148, 136, 0.08) 0%, transparent 34%),
+        radial-gradient(circle at 10% 90%, rgba(45, 212, 191, 0.06) 0%, transparent 38%);
+}
+.dark #about,
+.dark #social {
+    background-image:
+        radial-gradient(circle at 90% 10%, rgba(13, 148, 136, 0.16) 0%, transparent 34%),
+        radial-gradient(circle at 10% 90%, rgba(45, 212, 191, 0.12) 0%, transparent 38%);
+}
+
+/* ============================================================
+   Cards — layered lighting instead of a flat shadow.
+   Light source top-left: warm top highlight + colored lift.
+   ============================================================ */
 .card-hover,
 .social-card-hover {
-    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 300ms ease;
+}
+
+.card-hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                0 1px 2px rgba(15, 23, 42, 0.06),
+                0 8px 24px -12px rgba(13, 148, 136, 0.12);
+}
+.dark .card-hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                0 1px 2px rgba(0, 0, 0, 0.4),
+                0 16px 40px -20px rgba(13, 148, 136, 0.28);
 }
 
 .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                0 6px 12px -4px rgba(15, 23, 42, 0.12),
+                0 28px 60px -24px rgba(13, 148, 136, 0.4);
+}
+.dark .card-hover:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 6px 12px -4px rgba(0, 0, 0, 0.5),
+                0 28px 60px -22px rgba(13, 148, 136, 0.55);
+}
+
+.social-card-hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                0 4px 16px -8px rgba(15, 23, 42, 0.12);
+}
+.dark .social-card-hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                0 16px 40px -24px rgba(0, 0, 0, 0.6);
 }
 
 .social-card-hover:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                0 14px 34px -16px rgba(13, 148, 136, 0.35);
+}
+.dark .social-card-hover:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 18px 40px -18px rgba(0, 0, 0, 0.6);
 }
 
-/* ----- Profile avatar ring ----- */
+/* Hero profile card — soft rim light behind it */
+#home .rounded-2xl.overflow-hidden {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 1px 2px rgba(15, 23, 42, 0.08),
+                0 24px 60px -24px rgba(13, 148, 136, 0.45),
+                0 40px 90px -40px rgba(13, 148, 136, 0.3);
+}
+.dark #home .rounded-2xl.overflow-hidden {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.5),
+                0 24px 60px -22px rgba(13, 148, 136, 0.5);
+}
+
+/* Floating chips in hero — lit glass dots */
+#home .animate-float {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                0 10px 30px -12px rgba(13, 148, 136, 0.35);
+}
+.dark #home .animate-float {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                0 14px 34px -14px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   Buttons — beveled lighting: bright top edge, gradient body,
+   glowing shadow so primary CTA reads as the lit focal point.
+   ============================================================ */
+.bg-brand-teal {
+    background-image: linear-gradient(180deg, #14b8a6 0%, #0d9488 60%, #0c8378 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+                0 10px 24px -10px rgba(13, 148, 136, 0.65);
+    transition: box-shadow 300ms ease, transform 300ms ease, background-position 300ms ease;
+}
+.bg-brand-teal:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45),
+                0 16px 34px -10px rgba(13, 148, 136, 0.8);
+    transform: translateY(-1px);
+}
+
+/* Ghost / outline buttons get a subtle top light */
+.border.border-slate-200,
+.border.border-slate-700 {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================
+   Profile avatar conic ring — lit gradient
+   ============================================================ */
 .profile-ring {
-    background: conic-gradient(#0d9488, #14b8a6, #2dd4bf, #0d9488);
+    background: conic-gradient(from 180deg, #0d9488, #2dd4bf, #5eead4, #14b8a6, #0d9488);
     padding: 3px;
     border-radius: 9999px;
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.5);
 }
 
-/* ----- Floating animation ----- */
+/* ============================================================
+   Floating animation
+   ============================================================ */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(-10px); }
@@ -74,7 +275,9 @@
     animation: float 6s ease-in-out infinite;
 }
 
-/* ----- Scroll-in animation ----- */
+/* ============================================================
+   Scroll-in animation
+   ============================================================ */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -84,12 +287,16 @@
 .fade-in-up-delay-2  { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
 .fade-in-up-delay-3  { animation: fadeInUp 0.8s ease-out 0.45s forwards; opacity: 0; }
 
-/* ----- Smooth scrolling with fixed-nav offset ----- */
+/* ============================================================
+   Smooth scrolling with fixed-nav offset
+   ============================================================ */
 section[id] {
     scroll-margin-top: 80px;
 }
 
-/* ----- Active navigation link ----- */
+/* ============================================================
+   Active navigation link with a glowing underline
+   ============================================================ */
 .nav-link.active {
     color: #0d9488;
 }
@@ -100,16 +307,31 @@ section[id] {
     left: 0;
     right: 0;
     height: 2px;
-    background: #0d9488;
+    background: linear-gradient(90deg, transparent, #0d9488, transparent);
     border-radius: 1px;
+    box-shadow: 0 0 8px rgba(13, 148, 136, 0.6);
 }
 
-/* ----- Form fields (reusable) ----- */
+/* ============================================================
+   Form fields — lit focus ring
+   ============================================================ */
 .form-field:focus {
     border-color: transparent;
-    box-shadow: 0 0 0 2px #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.35),
+                0 8px 24px -12px rgba(13, 148, 136, 0.4);
     outline: none;
 }
 .form-field[aria-invalid="true"] {
     border-color: #ef4444;
+}
+
+/* ============================================================
+   Reduced motion accessibility
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after,
+    .gradient-text {
+        animation: none;
+    }
 }
