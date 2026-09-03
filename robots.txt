@@ -1,5 +1,5 @@
 # robots.txt for luckyyaduvanshi.in
-# Lucky Yaduvanshi Official Website - Backend Developer from Jaipur, India
+# Lucky Yaduvanshi Official Website - Python FastAPI Developer from Jaipur, India
 
 User-agent: *
 Allow: /

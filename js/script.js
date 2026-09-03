@@ -74,23 +74,107 @@
             });
         });
 
-        // ---- Contact Form (Demo) ----
+        // ---- Contact Form (Validation + Submission) ----
         const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formMessage.classList.remove('hidden');
-            formMessage.className = 'text-sm text-center py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400';
-            formMessage.textContent = '✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.';
-            contactForm.reset();
-            setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
-        });
+        if (contactForm) {
+            const contactSubmit = document.getElementById('contactSubmit');
+            const submitText = document.getElementById('submitText');
+            const submitLoader = document.getElementById('submitLoader');
+            const formMessage = document.getElementById('formMessage');
+
+            const setMessage = (text, type) => {
+                const styles = {
+                    success: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400',
+                    error: 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
+                };
+                formMessage.className = `text-sm text-center py-2 rounded-lg ${styles[type]}`;
+                formMessage.textContent = text;
+                formMessage.classList.remove('hidden');
+            };
+
+            const setLoading = (isLoading) => {
+                contactSubmit.disabled = isLoading;
+                contactSubmit.classList.toggle('opacity-60', isLoading);
+                contactSubmit.classList.toggle('cursor-not-allowed', isLoading);
+                submitText.textContent = isLoading ? 'Sending...' : 'Send Message';
+                if (submitLoader) submitLoader.classList.toggle('hidden', !isLoading);
+            };
+
+            const validateField = (input) => {
+                const value = input.value.trim();
+                if (!value) return false;
+                if (input.type === 'email') {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailPattern.test(value);
+                }
+                if (input.minLength && value.length < Number(input.minLength)) return false;
+                return true;
+            };
+
+            const validateForm = (form) => {
+                const fields = Array.from(form.querySelectorAll('[required]'));
+                let isValid = true;
+                fields.forEach((field) => {
+                    const isFieldValid = validateField(field);
+                    field.style.borderColor = isFieldValid ? '' : '#ef4444';
+                    if (!isFieldValid) isValid = false;
+                });
+                return isValid;
+            };
+
+            const clearFieldErrors = (form) => {
+                form.querySelectorAll('.form-field').forEach((field) => {
+                    field.style.borderColor = '';
+                });
+            };
+
+            contactForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                // Validate data before sending (good practice #20)
+                if (!validateForm(contactForm)) {
+                    setMessage('Please fill in all required fields with valid information.', 'error');
+                    return;
+                }
+
+                clearFieldErrors(contactForm);
+                setLoading(true);
+
+                const formData = {
+                    name: document.getElementById('contactName').value.trim(),
+                    email: document.getElementById('contactEmail').value.trim(),
+                    subject: document.getElementById('contactSubject').value.trim(),
+                    message: document.getElementById('contactMessage').value.trim()
+                };
+
+                try {
+                    // Replace with your real endpoint. Never expose API keys in frontend code.
+                    // const response = await fetch('https://your-backend.com/contact', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify(formData)
+                    // });
+                    // if (!response.ok) throw new Error('Request failed');
+
+                    // Demo submission (simulate network delay + loader)
+                    await new Promise((resolve) => setTimeout(resolve, 1200));
+
+                    setMessage('✓ Message sent successfully! Lucky Yaduvanshi will get back to you soon.', 'success');
+                    contactForm.reset();
+                } catch (error) {
+                    setMessage('Something went wrong. Please try again or email contact@luckyyaduvanshi.in.', 'error');
+                } finally {
+                    setLoading(false);
+                }
+            });
+        }
 
         // ---- Current Year ----
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentYearEl = document.getElementById('currentYear');
+        if (currentYearEl) {
+            currentYearEl.textContent = new Date().getFullYear();
+        }
 
         // ---- Scroll Animations (Intersection Observer) ----
         const observerOptions = {

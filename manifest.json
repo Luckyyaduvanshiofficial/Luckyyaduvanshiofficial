@@ -1,7 +1,7 @@
 {
-  "name": "Lucky Yaduvanshi - Backend Developer",
+  "name": "Lucky Yaduvanshi - Python FastAPI Developer",
   "short_name": "Lucky Yaduvanshi",
-  "description": "Backend Developer from Jaipur, India specializing in Node.js, PostgreSQL, and API development",
+  "description": "Python FastAPI Developer from Jaipur, India specializing in FastAPI, Python, SQL, PostgreSQL, and API development with an Astro.js frontend",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -42,6 +42,13 @@
       "icons": [{"src": "/images/lucky-main-2.png", "sizes": "192x192"}]
     },
     {
+      "name": "My Skills",
+      "short_name": "Skills",
+      "description": "View my Python FastAPI skills and technologies",
+      "url": "/skills.html",
+      "icons": [{"src": "/images/Lucky-colage.png", "sizes": "192x192"}]
+    },
+    {
       "name": "My Projects",
       "short_name": "Projects",
       "description": "View my backend development projects",
@@ -51,7 +58,7 @@
     {
       "name": "Contact Me",
       "short_name": "Contact",
-      "description": "Get in touch for backend development work",
+      "description": "Get in touch for Python backend development work",
       "url": "/#contact",
       "icons": [{"src": "/images/lucky-main-2.png", "sizes": "192x192"}]
     }

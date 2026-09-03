@@ -4,13 +4,13 @@
 
     <url>
         <loc>https://luckyyaduvanshi.in/</loc>
-        <lastmod>2025-05-06</lastmod>
+        <lastmod>2026-09-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://luckyyaduvanshi.in/images/Lucky-main-1.png</image:loc>
-            <image:title>Lucky Yaduvanshi Backend Developer</image:title>
-            <image:caption>Lucky Yaduvanshi — Backend Developer from Jaipur, India specializing in Node.js, PostgreSQL, and API development</image:caption>
+            <image:title>Lucky Yaduvanshi Python FastAPI Developer</image:title>
+            <image:caption>Lucky Yaduvanshi — Python FastAPI Developer from Jaipur, India specializing in Python, SQL, PostgreSQL, and API development</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://luckyyaduvanshi.in/images/lucky-main-2.png</image:loc>
@@ -23,22 +23,29 @@
     </url>
 
     <url>
+        <loc>https://luckyyaduvanshi.in/skills.html</loc>
+        <lastmod>2026-09-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
         <loc>https://luckyyaduvanshi.in/#about</loc>
-        <lastmod>2025-05-06</lastmod>
+        <lastmod>2026-09-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://luckyyaduvanshi.in/#projects</loc>
-        <lastmod>2025-05-06</lastmod>
+        <lastmod>2026-09-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://luckyyaduvanshi.in/#contact</loc>
-        <lastmod>2025-05-06</lastmod>
+        <lastmod>2026-09-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
