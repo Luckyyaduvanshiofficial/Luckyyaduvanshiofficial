@@ -35,11 +35,13 @@
             if (icon) {
                 icon.setAttribute('data-icon', isOpen ? 'lucide:menu' : 'lucide:x');
             }
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
         });
 
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 const icon = mobileMenuBtn.querySelector('.iconify');
                 if (icon) icon.setAttribute('data-icon', 'lucide:menu');
             });
