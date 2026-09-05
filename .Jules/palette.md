@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing Dynamic ARIA-Expanded Attributes on Toggle Buttons
+**Learning:** When using custom toggle buttons for managing visibility states (like the mobile menu), adding an initial `aria-expanded="false"` is not enough. The `aria-expanded` state must dynamically reflect the UI representation and map to the specific presence or absence of the visibility class (e.g., `hidden`), especially handling cases where visibility changes passively (like clicking an internal link).
+**Action:** Audit all custom visibility toggle elements (menus, accordions, modals) to ensure their `aria-expanded` attributes are bound to their corresponding content visibility state across all event handlers.
