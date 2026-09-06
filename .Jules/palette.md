@@ -1,0 +1,3 @@
+## 2026-09-06 - Dynamic aria-expanded on Mobile Menus
+**Learning:** When implementing or auditing toggle buttons that control content visibility (like mobile menus), always ensure they have dynamic `aria-expanded` attributes. It is critical to map this strictly to the presence of the visibility class (e.g. `hidden`) and update the attribute across *all* code paths/event listeners where visibility can change (e.g., closing a menu by clicking an internal link).
+**Action:** Add `aria-expanded` and `aria-controls` attributes to menu toggle buttons in HTML, and ensure the JS logic updates `aria-expanded` based on the menu's current visibility state, including edge cases like closing via navigation links.
