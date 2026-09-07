@@ -1,0 +1,3 @@
+## 2024-03-20 - ARIA Toggle State for Mobile Menus
+**Learning:** When toggling a mobile menu visibility class via JavaScript, the `aria-expanded` state must be updated accordingly. It is important to remember to also reset the `aria-expanded` state to `false` in event listeners that close the menu, such as internal anchor link clicks, to maintain an accurate accessibility tree.
+**Action:** Always map `aria-expanded` dynamically in all code paths that change the visibility of the controlled content.
