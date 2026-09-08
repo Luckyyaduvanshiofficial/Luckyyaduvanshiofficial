@@ -1,0 +1,3 @@
+## 2024-09-08 - Accessible toggle buttons in vanilla JavaScript
+**Learning:** When using vanilla JavaScript to toggle visibility classes (like Tailwind's `hidden`) for mobile menus, it is critical to also toggle the `aria-expanded` attribute on the control button. Variables evaluating the class's presence before toggling must be inverted to accurately map to the new post-toggle state.
+**Action:** Always map `aria-expanded` strictly to the visibility state and ensure it is updated across all code paths where visibility can change, including closing a menu by clicking an internal link.
