@@ -1,0 +1,3 @@
+## 2026-09-09 - Correctly Toggling Aria-Expanded for Dynamic Elements
+**Learning:** When using classList.toggle('hidden') to control visibility, a variable capturing the pre-toggle state (e.g., const isOpen = !element.classList.contains('hidden')) must be inverted (!isOpen) when subsequently applying the aria-expanded attribute so it maps to the correct new post-toggle state. Also need to remember to statically update it (e.g., to 'false') on interaction flows where the menu explicitly closes (like clicking a nav link).
+**Action:** Use inverted value (!isOpen) for dynamic UI updates and ensure explicit 'false' assignments in 'close' action routes.
