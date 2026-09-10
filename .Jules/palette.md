@@ -1,0 +1,3 @@
+## 2024-06-25 - Dynamic aria-expanded for Toggle Buttons
+**Learning:** When using JavaScript to toggle visibility classes (like Tailwind's 'hidden'), it's crucial to map this state dynamically to the `aria-expanded` attribute on the trigger button. Using `!isOpen` works well since `isOpen` represents the state before the toggle operation completes. Also, the attribute must be reset whenever the visibility state changes (e.g., when the menu is closed via an internal link).
+**Action:** Always verify that `aria-expanded` is dynamically updated across all code paths that alter the visibility of the controlled content.

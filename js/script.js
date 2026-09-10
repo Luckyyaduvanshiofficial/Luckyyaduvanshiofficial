@@ -30,6 +30,10 @@
         mobileMenuBtn.addEventListener('click', () => {
             const isOpen = !mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+
+            // Update aria-expanded based on the post-toggle state
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+
             // Animate hamburger to X
             const icon = mobileMenuBtn.querySelector('.iconify');
             if (icon) {
@@ -40,6 +44,7 @@
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 const icon = mobileMenuBtn.querySelector('.iconify');
                 if (icon) icon.setAttribute('data-icon', 'lucide:menu');
             });
