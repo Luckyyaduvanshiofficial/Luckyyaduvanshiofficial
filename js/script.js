@@ -61,6 +61,10 @@
         mobileMenuBtn.addEventListener('click', () => {
             const isOpen = !mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+
+            // Update aria-expanded (since isOpen represents the state BEFORE the toggle, the new state is !isOpen)
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+
             const icon = mobileMenuBtn.querySelector('.iconify');
             if (icon) {
                 icon.setAttribute('data-icon', isOpen ? 'lucide:menu' : 'lucide:x');
@@ -70,6 +74,7 @@
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 const icon = mobileMenuBtn.querySelector('.iconify');
                 if (icon) icon.setAttribute('data-icon', 'lucide:menu');
             });
