@@ -1,0 +1,3 @@
+## 2024-05-24 - Dynamic ARIA Expansion on Mobile Menus
+**Learning:** When implementing accessibility for mobile navigation toggles, simply adding `aria-expanded="false"` in the HTML is insufficient. The attribute must be dynamically updated in JavaScript to reflect state changes. Crucially, in this application, menu closure can be triggered not only by the toggle button itself but also by clicking internal links within the menu.
+**Action:** Always map the `aria-expanded` state directly to the presence of the visibility control class (e.g., `hidden`) across *all* event listeners where the menu's state can change, ensuring accurate structural feedback for screen readers at all times.
