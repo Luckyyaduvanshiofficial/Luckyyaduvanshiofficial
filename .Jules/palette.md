@@ -1,0 +1,3 @@
+## 2024-09-26 - aria-expanded on Mobile Menu
+**Learning:** When testing visibility toggling logic with Playwright on Tailwind CSS elements hidden with `hidden`, ensure element visibility and interaction uses direct JS execution if element is outside viewport due to container layout. Furthermore, `isOpen` state mapped to class presence needs inverted logic (e.g., `!isOpen`) when updating attributes *after* the `classList.toggle` operation.
+**Action:** Always map `aria-expanded` strictly to visibility state, handling both open/close toggle buttons and internal navigation links that close the menu.
