@@ -61,6 +61,8 @@
         mobileMenuBtn.addEventListener('click', () => {
             const isOpen = !mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+            mobileMenuBtn.setAttribute('aria-label', !isOpen ? 'Close Mobile Menu' : 'Open Mobile Menu');
             const icon = mobileMenuBtn.querySelector('.iconify');
             if (icon) {
                 icon.setAttribute('data-icon', isOpen ? 'lucide:menu' : 'lucide:x');
@@ -70,6 +72,8 @@
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open Mobile Menu');
                 const icon = mobileMenuBtn.querySelector('.iconify');
                 if (icon) icon.setAttribute('data-icon', 'lucide:menu');
             });
