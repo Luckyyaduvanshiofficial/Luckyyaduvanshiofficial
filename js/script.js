@@ -65,6 +65,8 @@
             if (icon) {
                 icon.setAttribute('data-icon', isOpen ? 'lucide:menu' : 'lucide:x');
             }
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+            mobileMenuBtn.setAttribute('aria-label', !isOpen ? 'Close Mobile Menu' : 'Open Mobile Menu');
         });
 
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
@@ -72,6 +74,8 @@
                 mobileMenu.classList.add('hidden');
                 const icon = mobileMenuBtn.querySelector('.iconify');
                 if (icon) icon.setAttribute('data-icon', 'lucide:menu');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open Mobile Menu');
             });
         });
     }
