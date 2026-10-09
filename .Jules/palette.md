@@ -1,0 +1,3 @@
+## 2024-05-24 - Dynamic aria-expanded on Mobile Menu Toggles
+**Learning:** When managing toggle elements in vanilla JS, reading the class state (e.g. `!element.classList.contains('hidden')`) before toggling the class results in a boolean that represents the *previous* state. We must invert it (e.g. `!isOpen`) to accurately map to the new post-toggle state for accessibility attributes like `aria-expanded`. Additionally, any other event (like clicking a child link) that closes the menu must also explicitly update `aria-expanded` to false.
+**Action:** Always map `aria-expanded` strictly to the visibility class (e.g. `hidden`) and update it across all code paths, remembering to handle the state correctly when toggling.
