@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 800 260" role="img" aria-labelledby="title desc">
+<title id="title">Lucky Yaduvanshi — Software Developer</title>
+<desc id="desc">Minimal charcoal developer profile banner with lime accents, grid, and LY monogram.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141E2B"/><stop offset="1" stop-color="#0B1119"/></linearGradient>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#617187" stroke-width=".5" opacity=".13"/></pattern>
+</defs>
+<rect width="800" height="260" fill="url(#bg)"/>
+<rect width="800" height="260" fill="url(#grid)"/>
+<path d="M35 31H765M35 218H765" stroke="#475569" opacity=".5"/>
+<circle cx="46" cy="31" r="4" fill="#B6F36B"/>
+<text x="59" y="35" fill="#A8B3C4" font-size="10" letter-spacing="2" font-family="monospace">LY / ENGINEERING</text>
+<text x="754" y="35" text-anchor="end" fill="#7F8B9D" font-size="10" font-family="monospace">01 — PROFILE</text>
+<text x="45" y="115" fill="#F6F8FB" font-size="42" font-weight="700" letter-spacing="-1.5" font-family="Arial,Helvetica,sans-serif">Lucky Yaduvanshi</text>
+<text x="47" y="151" fill="#B6F36B" font-size="13" font-family="monospace" letter-spacing="1">SOFTWARE DEVELOPER  /  AI &amp; SYSTEMS</text>
+<text x="47" y="186" fill="#A1AEC0" font-size="13" font-family="Arial,Helvetica,sans-serif">Building useful software. Exploring what's next.</text>
+<g transform="translate(684 120)" stroke="#B6F36B" fill="none" stroke-width="1.4">
+<rect x="-35" y="-35" width="70" height="70" rx="13" opacity=".6"/>
+<rect x="-24" y="-24" width="48" height="48" rx="9" opacity=".25" transform="rotate(45)"/>
+<path d="M-16 -10V12H-2M6 -10L16 12L26 -10" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="46" y="240" fill="#8897AC" font-size="10" font-family="monospace" letter-spacing="1.1">PYTHON  •  TYPESCRIPT  •  AI  •  INFRASTRUCTURE</text>
+<text x="755" y="240" fill="#8897AC" font-size="10" text-anchor="end" font-family="monospace">JAIPUR, IN</text>
+</svg>
